@@ -117,10 +117,10 @@ class User:
             for row in data_rows:
                 attr = row.find('th',first=True).text
                 val = row.find('td',first=True).text
-                data[attr]=val
-                if attr == 'Highest Rating':
-                    val = val.split()[0]
+                
+                if attr=='Rating':
                     data[attr]=val
+                   
         return data
     def spoj(self):
         url = "https://www.spoj.com/users/{}/".format(self.__username)
