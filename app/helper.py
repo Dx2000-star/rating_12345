@@ -86,8 +86,7 @@ class User:
             problems_solved['partial_solved'] = partial_solved
             print(problems_solved)
             return problems_solved
-        return {'status':'OK','rating':rating,'max_rating':max_rating,
-                'global_rank':global_rank,'country_rank':country_rank}
+        return {'status':'OK','rating':rating}
                 #'contests':get_contests_details(),'problems_solved':get_problems_solved()}
     def codeforces(self):
         url = 'https://codeforces.com/api/user.info?handles={}'.format(self.__username)
