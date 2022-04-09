@@ -99,7 +99,8 @@ class User:
             raise UsernameError('User not found')
         data  = dict()
         data['status'] = 'OK'
-        data.update(r_data['result'][0])
+        print(r_data['result'][0]['rating'])
+        data['rating']=(r_data['result'][0]['rating'])
         return data
     def atcoder(self):
         url = "https://atcoder.jp/users/{}".format(self.__username)
