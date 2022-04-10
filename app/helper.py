@@ -119,7 +119,7 @@ class User:
                 val = row.find('td',first=True).text
                 
                 if attr=='Rating':
-                    data[attr]=val
+                    data['rating']=val
                    
         return data
     def spoj(self):
