@@ -99,7 +99,7 @@ class User:
         data  = dict()
         data['status'] = 'OK'
         print(r_data['result'][0]['rating'])
-        data['rating']=(r_data['result'][0]['rating'])
+        data['rating']=str(r_data['result'][0]['rating'])
         return data
     def atcoder(self):
         url = "https://atcoder.jp/users/{}".format(self.__username)
